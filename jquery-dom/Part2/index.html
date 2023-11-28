@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <form class="movie-form">
+        <input
+          class="movie-rating"
+          type="text"
+          placeholder="Enter a sick movie"
+        />
+        <input
+          class="movie-rating"
+          type="number"
+          placeholder="0"
+          min="0"
+          max="10"
+        />
+        <input type="submit" />
+      </form>
+    </div>
+    <div>
+      <ol class="movie-list"></ol>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script>
+    $(".movie-form").on("submit", function () {
+      event.preventDefault();
+      const movie = $(".movie-rating").eq(0).val();
+      const rating = $(".movie-rating").eq(1).val();
+
+      const $li = $("<li>").text(`${movie} - ${rating}`);
+     const $button = $("<button>").text("X").on("click", function () {
+        $(this).parent().remove();
+      });
+      $li.append($button);
+      $(".movie-list").append($li);
+
+    });
+  </script>
+</html>
