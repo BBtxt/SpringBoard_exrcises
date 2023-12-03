@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Giphy Party!</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Set the height of the body to full viewport height */
+    body {
+      height: 100vh;
+    }
+    </style>
+</head>
+<body class="flex flex-col gap 2justify-center items-center bg-gradient-to-b from-gray-900 to-grey-800"">
+<div class="flex flex-row gap-2 items-center justify-center pt-8 pb-4">
+  <form class="gif-form">
+    <input type="text" name="gif" placeholder="Find a gif!" class="font-bold py-2 px-4 rounded">
+    <input type="submit" value="Search" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"" >
+  </form>
+  <button class="clear-btn bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"">Clear</button>
+</div>
+<ul class="gif-list flex flex-col gap-2 items-center"></ul>
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.js"></script>
+<script src="app.js"></script>
+</body>
+
+</html>
