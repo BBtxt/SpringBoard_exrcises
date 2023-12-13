@@ -10,7 +10,7 @@ function navAllStories(evt) {
   console.debug("navAllStories", evt);
   hidePageComponents();
   putStoriesOnPage();
-  $mainNav.show();
+  // $mainNav.show();
 }
 
 $body.on("click", "#nav-all", navAllStories);
@@ -37,9 +37,43 @@ function updateNavOnLogin() {
   $navUserProfile.text(`${currentUser.username}`).show();
 }
 
-$navSubmitStory.on("click", navSubmitStoryClick);
+
+// Show ui for submitting a new story
 
 function navSubmitStoryClick() {
   hidePageComponents();
   $submitForm.show();
 }
+
+$navSubmitStory.on("click", navSubmitStoryClick);
+
+// Show ui for favorited stories
+function myFavoriteStoriesClick() {
+  hidePageComponents();
+  showFavoriteStories();
+}
+
+$navFavorites.on("click", myFavoriteStoriesClick);
+
+// Show ui for user submitted stories
+
+function myStoriesClick() {
+  hidePageComponents();
+  showMyStories();
+}
+
+$myStoriesList.on("click", myStoriesClick);
+
+function updateNavOnLogin(){
+  $(".main-nav-links").show();
+  $navLogin.hide();
+  $navLogOut.show();
+  $navUserProfile.text(`${currentUser.username}`).show();
+}
+function navProfileClick(evt) {
+  console.debug("navProfileClick", evt);
+  hidePageComponents();
+  $userProfile.show();
+}
+
+$navUserProfile.on("click", navProfileClick);
