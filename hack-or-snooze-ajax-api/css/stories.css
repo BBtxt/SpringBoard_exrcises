@@ -31,9 +31,20 @@
 }
 
 .story-author {
-  margin-left: 2em;
+  color: green;
 }
 
 .story-user {
+  color: orange;
   display: block;
+}
+
+#story-details{
+  display: flex;
+  flex-direction: row;
+}
+
+#actions{
+  width: 15px;
+  margin-right: 5px;
 }
