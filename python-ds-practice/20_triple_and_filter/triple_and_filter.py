@@ -17,4 +17,5 @@ def triple_and_filter(nums):
     
     return [num * 3 for num in fours]
     
-    test =triple_and_filter([1, 2, 3, 4]) 
+test = triple_and_filter([1, 2, 3, 4])
+     

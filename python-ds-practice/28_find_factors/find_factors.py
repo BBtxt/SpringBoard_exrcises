@@ -16,8 +16,9 @@ def find_factors(num):
     factoids = []
     for i in range(1, num+1):
         if num%i == 0:
-            factoids.append(num)
+            factoids.append(i)
     
     return factoids
 
 test = find_factors(500)
+
