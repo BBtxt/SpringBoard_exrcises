@@ -1,3 +1,10 @@
+def frequencies(items):
+    count = {}
+    
+    for x in items:
+        count[x] = count.get(x, 0) + 1
+    return count
+
 def same_frequency(num1, num2):
     """Do these nums have same frequencies of digits?
     
@@ -10,3 +17,5 @@ def same_frequency(num1, num2):
         >>> same_frequency(1212, 2211)
         True
     """
+    return frequencies(str(num1)) == frequencies(str(num2))
+    

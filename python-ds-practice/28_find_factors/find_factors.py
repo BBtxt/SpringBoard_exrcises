@@ -13,3 +13,11 @@ def find_factors(num):
     >>> find_factors(321421)
     [1, 293, 1097, 321421]
     """
+    factoids = []
+    for i in range(1, num+1):
+        if num%i == 0:
+            factoids.append(num)
+    
+    return factoids
+
+test = find_factors(500)

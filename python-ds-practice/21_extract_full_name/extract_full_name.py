@@ -14,3 +14,12 @@ def extract_full_names(people):
         >>> extract_full_names(names)
         ['Ada Lovelace', 'Grace Hopper']
     """
+    for name in people:
+        print(name)
+        for char in name.values():
+            print(char)
+        
+names = [{'first': 'Ada', 'last': 'Lovelace'}, {'first': 'Grace', 'last': 'Hopper'},]
+extract_full_names(names)
+
+
